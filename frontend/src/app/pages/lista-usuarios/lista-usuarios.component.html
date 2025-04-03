@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h2 class="text-center">Lista de Usuarios</h2>
+  
+    <!-- Tabla de usuarios -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Iterar y mostrar-->
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.nombre }}</td>
+          <td>{{ usuario.edad }}</td>
+          <td>{{ usuario.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Mensaje si no hay usuarios -->
+    <div *ngIf="usuarios.length === 0" class="alert alert-warning text-center">
+      No hay usuarios registrados.
+    </div>
+  
+  </div>
+  
